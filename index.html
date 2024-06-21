@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        padding: 0;
+        margin: 0;
+        background-image: url(./wallpaper.png);
+        background-size: cover;
+    }
+
+
+    .navbar {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        justify-content: center;
+        font-family: myfont;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+
+    .left-box,
+    .right-box {
+        background: linear-gradient(300deg, darkblue, #005d9b, #003559);
+        background-size: 180% 180%;
+        animation: gradient-animation 3s ease infinite;
+        max-width: 300px;
+        border-radius: 2%;
+        box-shadow: 5px 5px 20px white;
+    }
+
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 50% 100%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+
+    .flex-container {
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+
+    .left-box {
+        flex: 1;
+        color: white;
+        font-family: myfont;
+        padding: 2%;
+        font-size: x-large;
+    }
+
+
+    .middle-box {
+        color: white;
+        text-align: center;
+        font-family: myfont;
+        margin-bottom: 350px;
+    }
+
+
+    .right-box {
+        flex: 1;
+        list-style: none;
+        color: white;
+        font-family: myfont;
+        padding: 2%;
+        font-size: x-large;
+    }
+
+
+
+    @font-face {
+        font-family: myfont;
+        src: url(./go3v2.ttf);
+    }
+
+    @media (max-width:760px) {
+        body {
+            background-image: url(./wallpaper.png);
+            background-position: center;
+        }
+
+        .flex-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+
+        }
+
+        .left-box {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .right-box {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+
+        .middle-box {
+            grid-column: span 2;
+            font-size: xx-large;
+        }
+
+
+        .left-box p {
+            margin: 0;
+        }
+
+
+        .right-box p {
+            margin: 0;
+        }
+
+        .middle-box {
+            margin: 0;
+        }
+
+        .right-box,
+        .left-box {}
+
+
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <a href="tel:9313973119" target="_blank"><img src="./icons8-phone-94.png" width="30px" height="30px"></a>
+        <a href="mailto:hiragarshivam@gmail.com" target="_blank"><img src="./icons8-gmail-94.png" width="30px"
+                height="30px"></a>
+        <a href="https://www.linkedin.com/in/shivam-hiragar/" target="_blank"><img src="./icons8-linkedin.svg"
+                height="30px" width="30px"></a>
+    </nav>
+
+    <div class="flex-container">
+        <div class="left-box">
+            <h2>Skills</h2>
+            <div id="list">
+                <p><img src="./icons8-html.svg" alt="HTML LOGO" width="25px"> HTML </p>
+                <p><img src="./icons8-css3.svg" alt="VANILLA LOGO" width="25px"> VANILLA CSS </p>
+                <p><img src="./icons8-tailwind-css.svg" alt="TAILWIND LOGO" width="25px"> TAILWIND CSS </p>
+                <p><img src="./icons8-bootstrap.svg" alt="BOOTSTRAP LOGO" width="25px"> BOOTSTRAP </p>
+                <p><img src="./icons8-javascript.svg" alt="JAVASCRIPT LOGO" width="25px"> JAVASCRIPT </p>
+            </div>
+        </div>
+
+        <div class="middle-box">
+            <h1>Kon'nichiwa Samurai</h1>
+            <h2>Watashi web samurai</h2>
+            <h2>Shivam Hiragar</h2>
+        </div>
+
+        <div class="right-box">
+            <h2>Education</h2>
+            <p>SVNIT cgpa: 8</p>
+            <p>Higher Secondary: <br> 75 percentage</p>
+            <p>Secondary: <br> 91 percentage</p>
+        </div>
+    </div>
+</body>
+
+
+
+
+</html>
